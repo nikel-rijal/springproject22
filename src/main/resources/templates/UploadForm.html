@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th = "https://thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>upload</title>
+</head>
+<body>
+<div class = "container-fluid">
+	
+		<th:block th:insert = "Header.html"></th:block>
+	
+		<div class = "card">
+			<div class = "card-header bg-primary text-center text-white">
+				<h1>Department Form</h1>
+			</div>
+			<div class = "card-body">
+			
+			<form action="/upload" method = "post" enctype = "multipart/form-data">
+				<p style = "Color:red">[[${message}]]</p>
+				<div class = "row m-2">
+					<div class = "col-4"> Select File :</div>
+					<div class = "col-6">
+						<input type = "file" name = "image" class = "form-control">
+					</div>
+				</div>
+				
+				
+				
+				<div class = "row m-2">
+					<div class = "col-4"></div>
+					<div class = "col-6">
+						<input type = "submit" value = "Upload" class = "btn btn-success">
+					</div>
+				</div>
+				</form>
+			</div>
+			<div class = "card-footer text-center bg-warning">@copyright2026</div>
+		</div>
+	</div>
+</body>
+</html>

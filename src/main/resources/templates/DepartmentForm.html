@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th = "https://thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>department</title>
+
+</head>
+<body>
+	
+	<div class = "container-fluid">
+	
+		<th:block th:insert = "Header.html"></th:block>
+	
+		<div class = "card">
+			<div class = "card-header bg-primary text-center text-white">
+				<h1>Department Form</h1>
+			</div>
+			<div class = "card-body">
+			
+			<form action="/department" method = "post">
+				<p style = "Color:red">[[${nullValue}]]</p>
+				<div class = "row m-2">
+					<div class = "col-4"> Department Name</div>
+					<div class = "col-6">
+						<input type = "text" name = "deptName" class = "form-control">
+					</div>
+				</div>
+				
+				<div class = "row m-2">
+					<div class = "col-4"> Department Head</div>
+					<div class = "col-6">
+						<input type = "text" name = "deptHead" class = "form-control">
+					</div>
+				</div>
+				
+				<div class = "row m-2">
+					<div class = "col-4"> Department Phone</div>
+					<div class = "col-6">
+						<input type = "text" name = "deptPhone" class = "form-control">
+					</div>
+				</div>
+				
+				<div class = "row m-2">
+					<div class = "col-4"></div>
+					<div class = "col-6">
+						<input type = "submit" value = "Add" class = "btn btn-success">
+					</div>
+				</div>
+				</form>
+			</div>
+			<div class = "card-footer text-center bg-warning">@copyright2026</div>
+		</div>
+	</div>
+
+</body>
+</html>
