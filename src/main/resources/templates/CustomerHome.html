@@ -228,9 +228,10 @@
 					<div class="new_arrivals_sorting">
 						<ul class="arrivals_grid_sorting clearfix button-group filters-button-group">
 							<li class="grid_sorting_button button d-flex flex-column justify-content-center align-items-center active is-checked" data-filter="*">all</li>
-							<li class="grid_sorting_button button d-flex flex-column justify-content-center align-items-center" data-filter=".women">women's</li>
-							<li class="grid_sorting_button button d-flex flex-column justify-content-center align-items-center" data-filter=".accessories">accessories</li>
-							<li class="grid_sorting_button button d-flex flex-column justify-content-center align-items-center" data-filter=".men">men's</li>
+							<li class="grid_sorting_button button d-flex flex-column justify-content-center align-items-center" data-filter=".mensclothing">Men's Clothing</li>
+							<li class="grid_sorting_button button d-flex flex-column justify-content-center align-items-center" data-filter=".jewelery">Jewelery</li>
+							<li class="grid_sorting_button button d-flex flex-column justify-content-center align-items-center" data-filter=".electronics">Electronics</li>
+							<li class="grid_sorting_button button d-flex flex-column justify-content-center align-items-center" data-filter=".womensclothing">Women's Clothing</li>
 						</ul>
 					</div>
 				</div>
@@ -239,9 +240,9 @@
 				<div class="col">
 					<div class="product-grid" data-isotope='{ "itemSelector": ".product-item", "layoutMode": "fitRows" }'>
 
-						<!-- Product 1 -->
+						<!-- All -->
 
-						<div class="product-item men" th:each = "pd: ${plist}">
+						<div class="product-item" th:each = "pd: ${plist}" th:classappend = "${pd.category}">
 							<div class="product discount product_filter">
 								<div class="product_image">
 									<img th:src="@{${pd.image}}" alt="">
@@ -250,11 +251,14 @@
 								<div class="product_bubble product_bubble_right product_bubble_red d-flex flex-column align-items-center"><span>-$20</span></div>
 								<div class="product_info">
 									<h6 class="product_name"><a href="single.html">[[${pd.title}]]</a></h6>
-									<div class="product_price">$520.00<span>[[${pd.price}]]</span></div>
+									<div class="product_price">$520.00<span>$[[${pd.price}]]</span></div>
 								</div>
 							</div>
 							<div class="red_button add_to_cart_button"><a href="#">add to cart</a></div>
 						</div>
+						
+						
+					
 
 						
 					</div>
